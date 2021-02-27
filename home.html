@@ -1,0 +1,56 @@
+<!DOCTYPE html>   
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+ <link rel="stylesheet" href="style.css">
+ <title>SEIR</title>
+</head>
+<body>
+<h>Susceptible - <font color="blue">&#9724</font>, Exposed - <font color="red">&#9724</font>,
+ Infected - <font color="black">&#9724</font>, Recovered - <font color="yellow">&#9724</font></h>
+<!-- <p style="padding-right:12px;">&nbsp;222&nbsp;&nbsp; 221 &nbsp;&nbsp; 220&nbsp;&nbsp;&nbsp;212&nbsp; &nbsp; 211&nbsp;&nbsp;&nbsp;210
+&nbsp;&nbsp; 202 &nbsp;&nbsp;201&nbsp;&nbsp; 200&nbsp;&nbsp; 122&nbsp;&nbsp;&nbsp; 121&nbsp;&nbsp; 120&nbsp;&nbsp;&nbsp; 112&nbsp;&nbsp; 111&nbsp;&nbsp;
+&nbsp;110&nbsp;&nbsp;&nbsp; 102&nbsp;&nbsp; 101&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp; 022 &nbsp;&nbsp;021 &nbsp;&nbsp;&nbsp;020&nbsp;&nbsp;
+ 012&nbsp;&nbsp;&nbsp; 011&nbsp;&nbsp; 010&nbsp;&nbsp;&nbsp; 002&nbsp;&nbsp; 001&nbsp;&nbsp;&nbsp; 000</p> -->
+<p>Infected at start
+  <select id="Infected" name="Infected" autocomplete="off">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</p>
+<p>p - transmission rate
+  <input type="number" step="0.001" min="0.001" max="1" id="Transmission" name="Transmission" size="5" placeholder="0-1">
+</p>
+<p>q - recovery probability
+  <input type="number" step="0.001" min="0.001" max="1" id="Recovery" name="Recovery" size="5" placeholder="0-1">
+</p>
+<p>r - incubation probability
+  <input type="number" step="0.001" min="0.001" max="1" id="Incubation" name="Incubation" size="5" placeholder="0-1">
+</p>
+<button type="button" id="start"
+onclick="start()">
+Run</button>
+<button type="button" id="pause"
+onclick="pause()">
+Pause</button>
+<button type="button" id="reset"
+onclick="reset()">
+Reset</button>
+<p id="day" style="font-size:20px"></p>
+<p id="machine" style="font-size:14px"></p>
+
+<script src="Script.js"></script>
+
+<div id="chartContainer" style="height: 240px; width:60%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
